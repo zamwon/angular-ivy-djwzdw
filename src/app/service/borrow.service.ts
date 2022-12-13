@@ -3,12 +3,12 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Borrow } from '../model/borrow';
 
-@Injectable()
+@Injectable({providedIn : 'root'})
 export class BorrowService {
 
-  private apiServerUrl = '';
+  private apiServerUrl = 'http://localhost:8080';
   
-  constructor(private http: HttpClient ) { }
+  constructor(private http: HttpClient) { }
 
   public getBorrow(): Observable<Borrow[]> {
     return this.http.get<Borrow[]>(`${this.apiServerUrl}/borrow/all`);

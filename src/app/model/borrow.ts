@@ -1,9 +1,7 @@
 
 export interface Borrow {
-  id: number;
-  borrower: string;
-  issueDate: Date;
-  returnDate: Date;
-  isBooked: boolean;
-
+  isbn: number;
+  borrowerName: string;
+  borrowerSurame: string;
+  dateOfBorrow: Date;
 }
